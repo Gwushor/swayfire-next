@@ -57,4 +57,5 @@ public:
 
 } // namespace swayfire
 
-DECLARE_WAYFIRE_PLUGIN(swayfire::swayfire_next_plugin);
+using namespace swayfire;
+DECLARE_WAYFIRE_PLUGIN(swayfire_next_plugin);
