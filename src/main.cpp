@@ -6,8 +6,6 @@
 #include <memory>
 #include <vector>
 
-namespace swayfire {
-
 enum class layout_node_type_t {
     WORKSPACE,
     SPLIT_CONTAINER,
@@ -50,11 +48,9 @@ public:
 
     void fini() override
     {
-        LOGI("Swayfire-Next: Unloading tiling engine...");
+        LOGI("Swayfire-Next: Unloading/cleaning tiling engine...");
         root_tree.reset();
     }
 };
 
-} // namespace swayfire
-
-DECLARE_WAYFIRE_PLUGIN(swayfire::swayfire_next_plugin);
+DECLARE_WAYFIRE_PLUGIN(swayfire_next_plugin);
