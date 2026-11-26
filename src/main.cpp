@@ -26,12 +26,12 @@ class swayfire_next_plugin : public wf::plugin_interface_t
 {
     std::unique_ptr<node_t> root_tree;
 
-    wf::observer_t<wf::view_mapped_signal> on_view_mapped = [=] (wf::view_mapped_signal *ev) {
+    wf::signal::connection_t<wf::view_mapped_signal> on_view_mapped = [=] (wf::view_mapped_signal *ev) {
         if (!ev || !ev->view) return;
         LOGI("Swayfire-Next: View mapped");
     };
 
-    wf::observer_t<wf::view_unmapped_signal> on_view_unmapped = [=] (wf::view_unmapped_signal *ev) {
+    wf::signal::connection_t<wf::view_unmapped_signal> on_view_unmapped = [=] (wf::view_unmapped_signal *ev) {
         if (!ev || !ev->view) return;
         LOGI("Swayfire-Next: View unmapped");
     };
