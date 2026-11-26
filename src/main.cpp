@@ -5,22 +5,18 @@
 #include <wayfire/output.hpp>
 #include <wayfire/per-output-plugin.hpp>
 
-class swayfire_next_plugin : public wf::per_output_plugin_instance_t
+class swayfire_next_plugin : public wf::plugin_interface_t
 {
 public:
     void init() override
     {
-        LOGI("Swayfire-Next: Per-output tiling engine initialized.");
+        LOGI("Swayfire-Next: Tiling engine initialized.");
     }
 
     void fini() override
     {
-        LOGI("Swayfire-Next: Per-output tiling engine unloaded.");
+        LOGI("Swayfire-Next: Tiling engine unloaded.");
     }
 };
 
-class swayfire_plugin_wrapper : public wf::per_output_plugin_t<swayfire_next_plugin>
-{
-};
-
-DECLARE_WAYFIRE_PLUGIN(swayfire_plugin_wrapper);
+DECLARE_WAYFIRE_PLUGIN(swayfire_next_plugin);
