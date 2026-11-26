@@ -19,4 +19,8 @@ public:
     }
 };
 
-DECLARE_WAYFIRE_PLUGIN(wf::per_output_plugin_t<swayfire_next_plugin>);
+class swayfire_plugin_wrapper : public wf::per_output_plugin_t<swayfire_next_plugin>
+{
+};
+
+DECLARE_WAYFIRE_PLUGIN(swayfire_plugin_wrapper);
