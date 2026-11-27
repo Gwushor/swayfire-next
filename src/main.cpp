@@ -62,7 +62,7 @@ class swayfire_output_t : public wf::custom_data_t
 {
   public:
     wf::output_t *output = nullptr;
-    wf::view_matcher_t tile_by_default{"swayfire/tile_by_default"};
+    wf::view_matcher_t tile_by_default{"swayfire-next/tile_by_default"};
 
     swayfire_output_t(wf::output_t *wo)
     {
@@ -87,12 +87,12 @@ class swayfire_output_t : public wf::custom_data_t
 
   private:
     /* ---- bindings ---- */
-    wf::option_wrapper_t<wf::keybinding_t> key_focus_left{"swayfire/key_focus_left"};
-    wf::option_wrapper_t<wf::keybinding_t> key_focus_right{"swayfire/key_focus_right"};
-    wf::option_wrapper_t<wf::keybinding_t> key_focus_up{"swayfire/key_focus_up"};
-    wf::option_wrapper_t<wf::keybinding_t> key_focus_down{"swayfire/key_focus_down"};
-    wf::option_wrapper_t<wf::activatorbinding_t> key_toggle_fullscreen{"swayfire/key_toggle_fullscreen"};
-    wf::option_wrapper_t<wf::keybinding_t> key_toggle_tiled{"swayfire/key_toggle_tiled"};
+    wf::option_wrapper_t<wf::keybinding_t> key_focus_left{"swayfire-next/key_focus_left"};
+    wf::option_wrapper_t<wf::keybinding_t> key_focus_right{"swayfire-next/key_focus_right"};
+    wf::option_wrapper_t<wf::keybinding_t> key_focus_up{"swayfire-next/key_focus_up"};
+    wf::option_wrapper_t<wf::keybinding_t> key_focus_down{"swayfire-next/key_focus_down"};
+    wf::option_wrapper_t<wf::activatorbinding_t> key_toggle_fullscreen{"swayfire-next/key_toggle_fullscreen"};
+    wf::option_wrapper_t<wf::keybinding_t> key_toggle_tiled{"swayfire-next/key_toggle_tiled"};
 
     wf::key_callback on_focus_left = [this] (const wf::keybinding_t&)
     {
